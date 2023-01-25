@@ -1,0 +1,32 @@
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindrome = function(x) {
+ var strOriginal = x.toString();
+ var strReverse = "";
+ for (let i=strOriginal.length-1; i>=0;i-- ) {
+
+        strReverse += strOriginal[i];
+ }
+
+    if (strOriginal == strReverse ) {
+
+        return true;
+    }
+
+    else {
+
+        return false;
+    }
+ 
+};
+
+
+
+/*
+var i = 234;
+var s = i.toString();
+console.log(typeof s); //将输出 String
+console.log(s);
+*/
