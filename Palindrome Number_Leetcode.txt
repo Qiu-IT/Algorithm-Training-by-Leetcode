@@ -24,9 +24,3 @@ var isPalindrome = function(x) {
 
 
 
-/*
-var i = 234;
-var s = i.toString();
-console.log(typeof s); //将输出 String
-console.log(s);
-*/
