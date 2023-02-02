@@ -4,6 +4,8 @@
  * @return {number}
  */
 var removeElement = function(nums, val) {
+   
+    //1.Step
     var numsResult =[];
 
     for (i=0; i<nums.length;i++){
@@ -12,8 +14,9 @@ var removeElement = function(nums, val) {
             numsResult.push(nums[i]);
         }
     }
-    console.log(numsResult);
-
+   
+    //2.Step
     nums.splice(0,nums.length);
+    //3.Step
     nums.push.apply(nums,numsResult);
 };
