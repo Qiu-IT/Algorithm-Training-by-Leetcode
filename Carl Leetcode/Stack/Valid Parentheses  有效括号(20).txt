@@ -1,0 +1,67 @@
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+Every close bracket has a corresponding open bracket of the same type.
+
+（LeetCode）
+https://leetcode.cn/problems/valid-parentheses
+
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var isValid = function(s) {
+
+if (s.length%2!=0) {
+
+    return false;
+}
+    const stack = [];
+    
+for (let i=0; i<s.length;i++){
+
+    if (s[i]=="("){
+
+        stack.push(")");
+    }
+
+     else if (s[i]=="["){
+
+        stack.push("]");
+    }
+
+    else if (s[i]=="{"){
+
+        stack.push("}");
+    }
+
+   
+    // console.log(stack);
+   /*else if (s[i]==stack.pop()) {
+
+        stack.pop();
+        
+            } */ // 千万不要加这句，这样的话等于走了两次pop，pop已经在if语句里面运行了一次，弹出了元素，因此这个Stack已经是减少的了。
+
+    else if (s[i]!=stack.pop()) {
+
+        return false;
+    }
+
+       // console.log(stack); 
+        
+}
+        
+       // console.log(stack.length);
+        return stack.length ==0;
+};
+
+
+
+
+
+
+
