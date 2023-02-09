@@ -1,0 +1,25 @@
+Given an array nums. We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
+
+Return the running sum of nums.
+
+LeetCode
+https://leetcode.cn/problems/running-sum-of-1d-array
+
+
+
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var runningSum = function(nums) {
+  
+rs = [];
+numsRs= 0;
+for (let i=0;i<nums.length;i++){
+    numsRs += nums[i];
+    rs.push(numsRs);
+}
+
+return rs;
+};
