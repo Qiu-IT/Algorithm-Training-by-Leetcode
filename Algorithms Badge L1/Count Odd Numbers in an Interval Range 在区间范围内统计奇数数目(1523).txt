@@ -1,0 +1,27 @@
+Given two non-negative integers low and high. Return the count of odd numbers between low and high (inclusive).
+
+（LeetCode）
+https://leetcode.cn/problems/count-odd-numbers-in-an-interval-range
+
+
+
+/**
+ * @param {number} low
+ * @param {number} high
+ * @return {number}
+ */
+var countOdds = function(low, high) {
+
+    rs = 0;
+
+    for (let i=0; i<=(high-low);i++){
+
+        if ((low+i)%2!=0){
+
+            rs +=1;
+        }
+    }
+    return rs;
+};
+
+

@@ -1,0 +1,33 @@
+You are given an array of unique integers salary where salary[i] is the salary of the ith employee.
+
+Return the average salary of employees excluding the minimum and maximum salary. Answers within 10-5 of the actual answer will be accepted.
+
+LeetCode
+https://leetcode.cn/problems/average-salary-excluding-the-minimum-and-maximum-salary
+
+
+/**
+ * @param {number[]} salary
+ * @return {number}
+ */
+var average = function(salary) {
+
+
+    salary.sort((a,b)=>a-b);
+    salary.shift(salary[0]);
+    salary.pop(salary[salary.length-1]);
+
+
+    rs = 0;
+    console.log(salary);
+
+   for (let i=0; i<salary.length;i++) {
+
+       rs += salary[i];
+   }
+
+
+    console.log(rs);
+     return rs/salary.length;
+
+};
